@@ -65,6 +65,14 @@ example: ssh -i /mnt/c/Users/Owner/Downloads/test1.pem EC2-user1@ec2-18-234-79-6
 
 //you many need setup username first for your instance
 
+Install an application:
+
+
+You can install software on ec2 instances just like on any other linux machine, e.g.:
+
+yum install -y perl emacs 
+
+
 Create image:
 
 
