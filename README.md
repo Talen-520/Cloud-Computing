@@ -57,12 +57,13 @@ ec2-describe-regions [instance id] -O [access key] -W [secret key]
 
 ssh into the newly created instance:
 chmod 400 [key location]
-chmod 400 /mnt/c/Users/Owner/Downloads/test1.pem
+example: chmod 400 /mnt/c/Users/Owner/Downloads/test1.pem
 
 
 ssh -i /path/key-pair-name.pem instance-user-name@instance-IPv6-address
-ssh -i /mnt/c/Users/Owner/Downloads/test1.pem EC2-user1@ec2-18-234-79-69.compute-1.amazonaws.com
+example: ssh -i /mnt/c/Users/Owner/Downloads/test1.pem EC2-user1@ec2-18-234-79-69.compute-1.amazonaws.com
 
+//you many need setup username first for your instance
 
 Create image:
 
