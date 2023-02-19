@@ -50,7 +50,7 @@ REGION  eu-west-1       ec2.eu-west-1.amazonaws.com
 # Create instance:
 ```
 ec2-run-instances ami-22ce4934 -O [access key] -W [secret key] -t t2.micro -k [key pair]
--t is instance type, bigger type will cost money -k is key pair
+//-t is instance type, bigger type will cost money -k is key pair
 ```
 
 # Check instance information:
