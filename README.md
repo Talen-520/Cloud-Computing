@@ -28,10 +28,15 @@ in Linux follwing Test your environment by running ec2-describe-regions command
 ec2-describe-regions -O [access key] -W [secret key]
 output be like: 
 REGION  ap-south-1      ec2.ap-south-1.amazonaws.com
+
 REGION  eu-north-1      ec2.eu-north-1.amazonaws.com
+
 REGION  eu-west-3       ec2.eu-west-3.amazonaws.com
+
 REGION  eu-west-2       ec2.eu-west-2.amazonaws.com
+
 REGION  eu-west-1       ec2.eu-west-1.amazonaws.com
+
 ...
 
 
