@@ -68,9 +68,10 @@ Create an instance of this new image and terminate all your instances -- record 
  Now you can start another instance from your customized AMI!
 
 
- $ ec2-run-instances new-ami-id -k 677kp -t t2.micro
-
-
+ ec2-run-instances new-ami-id -k [key] -t [instance type]
+ 
+ ec2-run-instances new-ami-id -k test1.pem -t t2.micro
+ 
 deregister your newly created AMI by
  ec2-deregister ami-id-here 
  example:  ec2-deregister ami-06744560fd4ad78ad
