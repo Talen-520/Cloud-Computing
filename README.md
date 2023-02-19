@@ -3,7 +3,7 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
 Following instuction is done by ubuntu(Linux)
 
-key pair:
+Key pair:
 after sign in your account, click service at left top bar, select compute at left bar then click EC2( or just search EC2 on search bar)
 under network security -> key pairs 
 create a key and download it
@@ -11,13 +11,18 @@ create a key and download it
 
 Access key:
 click your account icon at right top: it shows Account ID, setting, Organization etc...
+
 select security credentials -> scroll download find access key option, create one you need
 
 
 Note: you may need enter -O -W your access key every command
+
 after you create access key
-confirgure setup
+
+Confirgure setup
+
 command: aws configure
+
 document:
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html
 
@@ -27,6 +32,7 @@ in Linux follwing Test your environment by running ec2-describe-regions command
 
 ec2-describe-regions -O [access key] -W [secret key]
 output be like: 
+
 REGION  ap-south-1      ec2.ap-south-1.amazonaws.com
 
 REGION  eu-north-1      ec2.eu-north-1.amazonaws.com
@@ -40,12 +46,12 @@ REGION  eu-west-1       ec2.eu-west-1.amazonaws.com
 ...
 
 
-create instance:
+Create instance:
 command: ec2-run-instances ami-22ce4934 -O [access key] -W [secret key] -t t2.micro -k [key pair]
 -t is instance type, bigger type will cost money -k is key pair
 
 
-check instance information:
+Check instance information:
 ec2-describe-regions [instance id] -O [access key] -W [secret key]
 
 
@@ -58,7 +64,7 @@ ssh -i /path/key-pair-name.pem instance-user-name@instance-IPv6-address
 ssh -i /mnt/c/Users/Owner/Downloads/test1.pem EC2-user1@ec2-18-234-79-69.compute-1.amazonaws.com
 
 
-create image:
+Create image:
 
 
 ec2-create-image [instance id] -n [a image name] 
