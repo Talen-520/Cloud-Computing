@@ -69,7 +69,7 @@ Create image:
 
 
 ec2-create-image [instance id] -n [a image name] 
-this will return an ami id, note it down 
+this will return an customized ami id, note it down 
 example output: ami-06744560fd4ad78ad
 
 
@@ -82,7 +82,7 @@ Create an instance of this new image and terminate all your instances -- record 
 
  ec2-run-instances new-ami-id -k [key] -t [instance type]
  
- ec2-run-instances new-ami-id -k test1.pem -t t2.micro
+ example: ec2-run-instances ami-06744560fd4ad78ad -k test1.pem -t t2.micro
  
 deregister your newly created AMI by
  ec2-deregister ami-id-here 
@@ -92,7 +92,7 @@ deregister your newly created AMI by
  ec2-describe-snapshots | grep ami-06744560fd4ad78ad
 
 
-example  ec2-describe-snapshots -O AKIAUGLUZ76IJAR3NE5Y -W 80le9Wc3Z5wWBWHS/oAcI2aJMot/mWkwZ4I41Ssd
+example: ec2-describe-snapshots -O AKIAUGLUZ76IJAR3NE5Y -W 80le9Wc3Z5wWBWHS/oAcI2aJMot/mWkwZ4I41Ssd
 | grep ami-06744560fd4ad78ad
 
 
