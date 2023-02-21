@@ -81,7 +81,7 @@ yum install -y perl emacs
 # Create image:
 
 
-ec2-create-image [instance id] -n [a image name] 
+ec2-create-image [instance id] -n [a image name] -O [access key] -W [secret key]
 this will return an customized ami id, note it down 
 example output: ami-06744560fd4ad78ad
 
@@ -93,7 +93,7 @@ Create an instance of this new image and terminate all your instances -- record 
  # Now you can start another instance from your customized AMI!
 
 ```
- ec2-run-instances new-ami-id -k [key] -t [instance type]
+ ec2-run-instances new-ami-id -k [key] -t [instance type] -O [access key] -W [secret key]
  ```
  example: ec2-run-instances ami-06744560fd4ad78ad -k test1.pem -t t2.micro
  
@@ -105,7 +105,7 @@ Create an instance of this new image and terminate all your instances -- record 
  ```
  ec2-describe-snapshots | grep ami-06744560fd4ad78ad
 
-example: ec2-describe-snapshots -O AKIAUGLUZ76IJAR3NE5Y -W 80le9Wc3Z5wWBWHS/oAcI2aJMot/mWkwZ4I41Ssd
+example: ec2-describe-snapshots -O [access key] -W [secret key]
 | grep ami-06744560fd4ad78ad
 ```
 
