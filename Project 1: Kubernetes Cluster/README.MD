@@ -1,5 +1,7 @@
 https://phantom.cs.qc.cuny.edu/li/cc/Project1.html
+
 Project 1: Kubernetes Cluster
+
 Due: March 19, 11:59 PM
 
 The purpose of this project is to get yourself familiar with setting up a Kubenetes cluster and orchestrating containers in a Kubenetes cluster. You can choose any cloud platforms such as AWS, GCP, and Azure.
