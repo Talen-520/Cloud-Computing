@@ -1,11 +1,18 @@
 1.Task 1: Launch a Kubenetes cluster. You will need to configure the cluster with one master and at least two workers. You can build your own cluster from scratch on virtual machines, or use cloud-based Kubernetes services such as AWS EKS, Azure Kubernetes Service, or Google Kubernetes Engine.
 
-Advantage of AWS EKS:
+Advantage of AWS EKS(Elastic Kubernetes Service):
 
 - AWS manage master nodes
 
 - necessary app(environment) pre-installed  
 
--AWS mantaince for you
+- AWS mantaince for you
 
-we only need works on worker nodes
+we only need works on worker nodes, create two node group to connect/attach/join to cluster 
+
+>  1.create as a Node group(groups of Nodes)
+>  2. choose cluster it will attach to
+>  3. define security group, select instance type, resource
+>  4. define max and min number of Nodes
+>  5. then you can deploy application by kubernetes command line tool (kubctl)
+
