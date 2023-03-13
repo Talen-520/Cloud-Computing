@@ -16,3 +16,11 @@ we only need works on worker nodes, create two node group to connect/attach/join
 >  4. define max and min number of Nodes
 >  5. then you can deploy application by kubernetes command line tool (kubctl)
 
+eksctl is a simple CLI tool for creating and managing clusters on EKS - Amazon's managed Kubernetes service for EC2. It is written in Go, uses CloudFormation, was created by Weaveworks and it welcomes contributions from the community.
+
+with eksctl:
+
+1.installation
+
+ref: https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html
+
