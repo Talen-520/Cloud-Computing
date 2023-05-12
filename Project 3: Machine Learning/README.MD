@@ -1,1 +1,12 @@
+Project 3: Machine Learning
+Due: May 13, 11:59 PM
 
+In this project, you will need to train a simple CNN model on MNIST in the cloud. You can use any machine learning library that supports distributed training, such as Tensorflow and PyTorch. You can use IaaS or MLaaS in any cloud. If you choose to use IaaS, you may also choose a paid image with common libraries for machine learning installed. Note that a low-end instance should be sufficient to complete the training without a very long time. The higher-end instance (such as those with GPUs) may be more expensive. 
+
+You will start with writing the code for training the model on a single machine. The dataset for you to train your model is MNIST handwritten digits database. Train the CNN model to recognize the number in each picture. The code of the CNN model can be built from scratch, or uses the API of an existing model from the library (such as resnet18). Use stochastic gradient descent (SGD) as the training algorithm. You may need to try different metaparameters to achieve the best result.
+
+The next task is to modify the workloads so that they can be launched in a distributed way with data parallelism. You may experiment with either synchronous or asynchronous SGD. In the distributed mode, dataset is usually spread among instances (or configured by the API provided by the MLaaS platform). On each iteration, the gradients are calculated on each worker machine using its shard of data. In synchronous training, the gradients will be accumulated to update the model and then go to the next iteration (i.e., all-reduce). On the other hand, in asynchronous training, there is no accumulation process and the worker nodes update the model independently (e.g., to a parameter server).
+
+After finishing the implementation, plot the performance and test error for both of the two modes and explain any similarity/differences. In addition, monitor the CPU/Memory/Network usage.  You should also monitor the CPU/Memory/Network usage of each instance during training. You can try to use tools like: dstat or sar. You are welcome to use any other tool you like to monitor the system, or the APIs provided by the cloud. Show your observations and determine which one is the bottleneck.
+
+Deliverables: You should submit a report describing how you complete each step and reporting your observations as required above. You also need to submit the code used for the training on a single machine and multiple machines, respectively.
